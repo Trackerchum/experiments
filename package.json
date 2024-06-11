@@ -1,0 +1,16 @@
+{
+    "name": "untitled-project-game",
+    "version": "0.1.0",
+    "repository": "git@github.com:Trackerchum/untitled-project-game.git",
+    "author": "James Morrison",
+    "private": true,
+    "scripts": {
+        "install": "yarn install:backend && yarn install:ui",
+        "uninstall": "rm -rf src/**/node_modules src/**/**/node_modules",
+        "reinstall": "yarn reinstall:backend && yarn reinstall:ui",
+        "install:backend": "cd src/backend/server && yarn install && cd ../../../",
+        "reinstall:backend": "rm -rf src/backend/server/node_modules && yarn install:backend",
+        "install:ui": "cd src/frontend/ui && yarn install && cd ../../../",
+        "reinstall:ui": "rm -rf src/frontend/ui/node_modules && yarn install:ui"
+    }
+}
